@@ -1,16 +1,17 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import Sidebar from '../pages/Sidebar';
 import './sidebar.css';
 
-const withSidebar = (WrappedComponent) => {
-    return (props) => (
+const SidebarLayout = () => {
+    return (
         <div className="sidebar-container">
             <Sidebar />
             <div className="sidebar-main">
-                <WrappedComponent {...props} />
+                <Outlet />
             </div>
         </div>
     );
 };
 
-export default withSidebar;
+export default SidebarLayout;

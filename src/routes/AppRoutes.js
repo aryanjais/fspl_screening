@@ -1,12 +1,10 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import withSidebar from '../hocs/withSidebar';
+import SidebarLayout from '../hocs/SidebarLayout';
 
 const Login = lazy(() => import('../pages/Login'));
 const Dashboard = lazy(() => import('../pages/Dashboard'));
 const ScanDetail = lazy(() => import('../pages/Scan'));
-const DashboardWithSidebar = withSidebar(Dashboard);
-const ScanDetailWithSidebar = withSidebar(ScanDetail);
 
 const AppRoutes = () => {
     return (
@@ -14,8 +12,10 @@ const AppRoutes = () => {
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/" element={<Navigate to="/login" replace />} />
-                <Route path="/dashboard" element={<DashboardWithSidebar />} />
-                <Route path="/scans" element={<ScanDetailWithSidebar />} />
+                <Route element={<SidebarLayout />}>
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/scans" element={<ScanDetail />} />
+                </Route>
             </Routes>
         </Suspense>
     );
