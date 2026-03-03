@@ -1,29 +1,8 @@
 import React from 'react';
 import './Dashboard.css';
-
-const Header = () => {
-    return (
-        <div className="header">
-            <h2>Header</h2>
-        </div>
-    );
-};
-
-const Stats = () => {
-    return (
-        <div className="stats">
-            <h2>Stats</h2>
-        </div>
-    );
-};
-
-const SeverityCards = () => {
-    return (
-        <div className="severity-cards">
-            <h2>Severity Cards</h2>
-        </div>
-    );
-};
+import Header from './components/Header';
+import Stats from './components/Stats';
+import SeverityCards from './components/SeverityCards';
 
 const ScanTable = () => {
     return (

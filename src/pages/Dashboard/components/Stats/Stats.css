@@ -1,0 +1,49 @@
+.dashboard-stats {
+    display: flex;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #ffffff;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #64748b;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-label {
+    color: #94a3b8;
+}
+
+.stat-value {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 16px;
+    background-color: #eaedf3;
+    margin: 0 24px;
+}
+
+.stat-spacer {
+    flex: 1;
+}
+
+.stat-last-updated {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #1a9e8e;
+    font-weight: 500;
+}
+
+.update-icon {
+    font-size: 16px !important;
+}
