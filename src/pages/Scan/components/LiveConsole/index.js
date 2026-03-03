@@ -11,7 +11,14 @@ const LiveConsole = () => {
     return (
         <>
             <div className="live-console-container">
-                <Accordion defaultExpanded sx={{ borderRadius: '15px', '&:before': { display: 'none' }, boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)' }}>
+                <Accordion
+                    defaultExpanded
+                    sx={{
+                        boxShadow: (theme) => theme.palette.mode === 'dark'
+                            ? '0 4px 20px rgba(0,0,0,0.5)'
+                            : '0 4px 20px rgba(0,0,0,0.05)'
+                    }}
+                >
                     <LiveConsoleHeader />
                     <AccordionDetails sx={{ p: 0, display: 'flex', flexDirection: 'column' }}>
                         <ConsoleTabs />

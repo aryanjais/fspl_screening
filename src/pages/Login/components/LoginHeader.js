@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import ThemeToggle from '../../../components/ThemeToggle';
 
 const LoginHeader = () => {
     return (
@@ -8,6 +9,9 @@ const LoginHeader = () => {
             <Typography variant="h6" sx={{ color: 'white', fontWeight: 'bold', letterSpacing: 1 }}>
                 aps
             </Typography>
+            <div className="theme-toggle-wrapper">
+                <ThemeToggle />
+            </div>
         </Box>
     );
 };

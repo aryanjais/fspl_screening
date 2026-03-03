@@ -14,6 +14,9 @@ export const ThemeContextProvider = ({ children }) => {
         const savedMode = localStorage.getItem('themeMode');
         if (savedMode) {
             setMode(savedMode);
+            document.documentElement.setAttribute('data-theme', savedMode);
+        } else {
+            document.documentElement.setAttribute('data-theme', mode);
         }
     }, []);
 
@@ -22,6 +25,7 @@ export const ThemeContextProvider = ({ children }) => {
             setMode((prevMode) => {
                 const newMode = prevMode === 'light' ? 'dark' : 'light';
                 localStorage.setItem('themeMode', newMode);
+                document.documentElement.setAttribute('data-theme', newMode);
                 return newMode;
             });
         },

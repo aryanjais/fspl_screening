@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: var(--background-paper);
     padding: 24px 12px;
     border-radius: 8px 8px 0 0;
 }
@@ -14,12 +14,12 @@
 .search-box {
     display: flex;
     align-items: center;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    background-color: var(--background-paper);
+    border: 1px solid var(--border-light);
     border-radius: 6px;
     padding: 8px 16px;
     width: 320px;
-    color: #94a3b8;
+    color: var(--text-tertiary);
 }
 
 .search-box input {
@@ -45,10 +45,10 @@
     align-items: center;
     gap: 8px;
     padding: 8px 16px;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    background-color: var(--background-paper);
+    border: 1px solid var(--border-light);
     border-radius: 6px;
-    color: #475569;
+    color: var(--text-secondary);
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
@@ -79,7 +79,7 @@
 }
 
 .table-wrapper {
-    background-color: #ffffff;
+    background-color: var(--background-paper);
     border-radius: 0 0 8px 8px;
     overflow: hidden;
 }
@@ -93,14 +93,14 @@
 
 .scan-table th {
     padding: 16px 24px;
-    color: #94a3b8;
+    color: var(--text-tertiary);
     font-weight: 500;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--divider);
 }
 
 .scan-table td {
     padding: 16px 24px;
-    color: #475569;
+    color: var(--text-secondary);
 }
 
 .scan-table tr:last-child td {
@@ -108,12 +108,12 @@
 }
 
 .scan-table tr:hover {
-    background-color: #f8fafc;
+    background-color: var(--background-secondary);
 }
 
 .row-name {
     font-weight: 600;
-    color: #0f172a;
+    color: var(--text-primary);
 }
 
 .row-date {
@@ -134,18 +134,18 @@
 }
 
 .status-badge.completed {
-    background-color: #dcfce7;
-    color: #16a34a;
+    background-color: var(--success-bg);
+    color: var(--success-main);
 }
 
 .status-badge.scheduled {
-    background-color: #e0e7ff;
-    color: #4f46e5;
+    background-color: var(--info-bg);
+    color: #2563eb;
 }
 
 .status-badge.failed {
-    background-color: #fee2e2;
-    color: #ef4444;
+    background-color: var(--error-bg);
+    color: var(--error-main);
 }
 
 /* Progress */
@@ -158,7 +158,7 @@
 .progress-track {
     width: 60px;
     height: 6px;
-    background-color: #f1f5f9;
+    background-color: var(--background-secondary);
     border-radius: 3px;
     overflow: hidden;
 }

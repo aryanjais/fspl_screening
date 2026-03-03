@@ -38,13 +38,9 @@ const LoginRight = () => {
                     maxWidth: 440,
                     width: '100%',
                     p: { xs: 4, md: 5 },
-                    bgcolor: '#FFFFFF',
-                    borderRadius: 3,
-                    color: '#000000',
-                    boxShadow: '0px 10px 40px rgba(0,0,0,0.1)'
                 }}
             >
-                <Typography variant="h4" fontWeight="bold" align="center" gutterBottom sx={{ color: '#1A1A1A' }}>
+                <Typography variant="h4" fontWeight="bold" align="center" gutterBottom>
                     Sign up
                 </Typography>
                 <Typography variant="body2" color="text.secondary" align="center" gutterBottom sx={{ mb: 4, fontSize: '0.9rem' }}>
@@ -55,48 +51,36 @@ const LoginRight = () => {
                     <TextField
                         fullWidth
                         placeholder="First name*"
-                        variant="outlined"
-                        size="small"
-                        sx={{ bgcolor: '#fff', '& .MuiOutlinedInput-root': { borderRadius: 1.5 } }}
                     />
                     <TextField
                         fullWidth
                         placeholder="Last name*"
-                        variant="outlined"
-                        size="small"
-                        sx={{ bgcolor: '#fff', '& .MuiOutlinedInput-root': { borderRadius: 1.5 } }}
                     />
                     <TextField
                         fullWidth
                         placeholder="Email address*"
                         type="email"
-                        variant="outlined"
-                        size="small"
-                        sx={{ bgcolor: '#fff', '& .MuiOutlinedInput-root': { borderRadius: 1.5 } }}
                     />
                     <TextField
                         fullWidth
                         placeholder="Password (8+ characters)*"
                         type="password"
-                        variant="outlined"
-                        size="small"
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
                                     <IconButton edge="end">
-                                        <VisibilityOffIcon fontSize="small" sx={{ color: '#666' }} />
+                                        <VisibilityOffIcon fontSize="small" sx={{ color: 'text.secondary' }} />
                                     </IconButton>
                                 </InputAdornment>
                             )
                         }}
-                        sx={{ bgcolor: '#fff', '& .MuiOutlinedInput-root': { borderRadius: 1.5 } }}
                     />
                 </Box>
 
                 <FormControlLabel
-                    control={<Checkbox size="small" sx={{ color: '#ccc', '&.Mui-checked': { color: 'primary.main' } }} />}
+                    control={<Checkbox size="small" sx={{ color: 'divider', '&.Mui-checked': { color: 'primary.main' } }} />}
                     label={
-                        <Typography variant="body2" sx={{ fontSize: '0.75rem', color: '#333' }}>
+                        <Typography variant="body2" sx={{ fontSize: '0.75rem', color: 'text.secondary' }}>
                             I agree to Aps's <Link href="#" underline="always" color="primary">Terms & Conditions</Link> and acknowledge the <Link href="#" underline="always" color="primary">Privacy Policy</Link>
                         </Typography>
                     }
@@ -108,18 +92,10 @@ const LoginRight = () => {
                     fullWidth
                     variant="contained"
                     size="large"
-                    disableElevation
                     sx={{
                         mb: 4,
                         py: 1.25,
-                        borderRadius: 8,
-                        fontWeight: 'bold',
-                        textTransform: 'none',
                         fontSize: '1rem',
-                        bgcolor: 'primary.main',
-                        '&:hover': {
-                            bgcolor: 'primary.dark',
-                        }
                     }}
                 >
                     Create account
@@ -128,13 +104,10 @@ const LoginRight = () => {
                 <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
                     <Button
                         variant="contained"
-                        disableElevation
                         sx={{
                             flex: 1,
                             bgcolor: 'black',
                             color: 'white',
-                            borderRadius: 8,
-                            py: 1.25,
                             '&:hover': { bgcolor: '#333' }
                         }}
                     >
@@ -144,25 +117,18 @@ const LoginRight = () => {
                         variant="outlined"
                         sx={{
                             flex: 1,
-                            bgcolor: '#fcfcfc',
-                            color: '#000',
-                            borderRadius: 8,
-                            py: 1.25,
-                            borderColor: '#eee',
-                            '&:hover': { bgcolor: '#f5f5f5', borderColor: '#ddd' }
+                            borderColor: 'divider',
+                            '&:hover': { borderColor: 'text.primary' }
                         }}
                     >
                         <img width={24} height={24} src="assets/google.svg" alt="Google" />
                     </Button>
                     <Button
                         variant="contained"
-                        disableElevation
                         sx={{
                             flex: 1,
                             bgcolor: '#3b5998',
                             color: 'white',
-                            borderRadius: 8,
-                            py: 1.25,
                             '&:hover': { bgcolor: '#365899' }
                         }}
                     >

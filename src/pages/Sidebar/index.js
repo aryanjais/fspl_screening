@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './sidebar.css';
+import ThemeToggle from '../../components/ThemeToggle';
 import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
 import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
 import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
@@ -19,6 +20,9 @@ const Sidebar = () => {
             <div className="sidebar-logo">
                 <div className="aps-logo-icon"></div>
                 <h2>aps</h2>
+                <div className="theme-toggle-wrapper">
+                    <ThemeToggle />
+                </div>
             </div>
 
             <div className="sidebar-nav">
@@ -26,44 +30,46 @@ const Sidebar = () => {
                     <li
                         className={`sidebar-item ${location.pathname === '/dashboard' ? 'active' : ''}`}
                         onClick={() => navigate('/dashboard')}
+                        title="Dashboard"
                     >
                         <GridViewRoundedIcon fontSize="small" className="sidebar-icon" />
-                        <span>Dashboard</span>
+                        <span className="menu-label">Dashboard</span>
                     </li>
-                    <li className="sidebar-item">
+                    <li className="sidebar-item" title="Projects">
                         <AssignmentOutlinedIcon fontSize="small" className="sidebar-icon" />
-                        <span>Projects</span>
+                        <span className="menu-label">Projects</span>
                     </li>
                     <li
                         className={`sidebar-item ${location.pathname.startsWith('/scans') ? 'active' : ''}`}
                         onClick={() => navigate('/scans')}
+                        title="Scans"
                     >
                         <AnalyticsOutlinedIcon fontSize="small" className="sidebar-icon" />
-                        <span>Scans</span>
+                        <span className="menu-label">Scans</span>
                     </li>
-                    <li className="sidebar-item">
+                    <li className="sidebar-item" title="Schedule">
                         <CalendarMonthOutlinedIcon fontSize="small" className="sidebar-icon" />
-                        <span>Schedule</span>
+                        <span className="menu-label">Schedule</span>
                     </li>
                 </ul>
 
                 <div className="sidebar-spacer"></div>
 
                 <ul className="sidebar-menu">
-                    <li className="sidebar-item notifications">
+                    <li className="sidebar-item notifications" title="Notifications">
                         <div className="notification-icon-wrapper">
                             <NotificationsNoneOutlinedIcon fontSize="small" className="sidebar-icon" />
                             <span className="notification-dot"></span>
                         </div>
-                        <span>Notifications</span>
+                        <span className="menu-label">Notifications</span>
                     </li>
-                    <li className="sidebar-item">
+                    <li className="sidebar-item" title="Settings">
                         <SettingsOutlinedIcon fontSize="small" className="sidebar-icon" />
-                        <span>Settings</span>
+                        <span className="menu-label">Settings</span>
                     </li>
-                    <li className="sidebar-item">
+                    <li className="sidebar-item" title="Support">
                         <InfoOutlinedIcon fontSize="small" className="sidebar-icon" />
-                        <span>Support</span>
+                        <span className="menu-label">Support</span>
                     </li>
                 </ul>
             </div>

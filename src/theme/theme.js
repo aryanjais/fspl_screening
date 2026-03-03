@@ -41,6 +41,94 @@ const getDesignTokens = (mode) => ({
                 divider: 'rgba(255, 255, 255, 0.12)',
             }),
     },
+    components: {
+        MuiCssBaseline: {
+            styleOverrides: {
+                body: {
+                    transition: 'background-color 0.3s ease, color 0.3s ease',
+                },
+            },
+        },
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    backgroundImage: 'none',
+                    borderRadius: 12,
+                    backgroundColor: 'var(--background-paper)', // Use CSS variable
+                    transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
+                    '&.MuiPaper-elevation3': {
+                        boxShadow: mode === 'dark'
+                            ? '0px 10px 40px rgba(0,0,0,0.5)'
+                            : '0px 10px 40px rgba(0,0,0,0.1)',
+                    }
+                },
+            },
+        },
+        MuiAccordion: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: 'var(--background-paper)',
+                    color: 'var(--text-primary)',
+                    borderRadius: 12,
+                    '&:before': { display: 'none' },
+                    overflow: 'hidden',
+                },
+            },
+        },
+        MuiAccordionSummary: {
+            styleOverrides: {
+                root: {
+                    borderBottom: '1px solid var(--divider)',
+                },
+            },
+        },
+        MuiTableCell: {
+            styleOverrides: {
+                root: {
+                    borderColor: 'var(--divider)',
+                    color: 'var(--text-secondary)',
+                },
+                head: {
+                    color: 'var(--text-tertiary)',
+                    fontWeight: 600,
+                }
+            }
+        },
+        MuiTextField: {
+            defaultProps: {
+                size: 'small',
+                variant: 'outlined',
+            },
+            styleOverrides: {
+                root: {
+                    '& .MuiOutlinedInput-root': {
+                        borderRadius: 12,
+                        backgroundColor: mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : '#fff',
+                        transition: 'background-color 0.3s ease',
+                        '& fieldset': {
+                            borderColor: 'var(--border-light)', // Use CSS variable
+                        },
+                        '&:hover fieldset': {
+                            borderColor: 'var(--border-medium)', // Use CSS variable
+                        },
+                    },
+                },
+            },
+        },
+        MuiButton: {
+            defaultProps: {
+                disableElevation: true,
+            },
+            styleOverrides: {
+                root: {
+                    borderRadius: 8,
+                    textTransform: 'none',
+                    fontWeight: 'bold',
+                    padding: '8px 24px',
+                },
+            },
+        },
+    },
 });
 
 export const getTheme = (mode) => createTheme(getDesignTokens(mode));

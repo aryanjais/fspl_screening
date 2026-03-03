@@ -7,28 +7,69 @@
   /* light mode defaults */
   --background-default: #F5F5F5;
   --background-paper: #FFFFFF;
-  --background-light: #f8fafc;
-  --background-dark: #0b1a26;
+  --background-secondary: #f8fafc;
   --text-primary: #0f172a;
   --text-secondary: #64748b;
   --text-tertiary: #94a3b8;
   --text-inverse: #ffffff;
   --divider: rgba(0, 0, 0, 0.12);
   --border-light: #e2e8f0;
+  --border-medium: #cbd5e1;
+
+  /* semantic state colors (low opacity backgrounds) */
+  --error-bg: #fef2f2;
+  --error-border: #fecaca;
+  --success-bg: #f0fdf4;
+  --success-border: #bbf7d0;
+  --warning-bg: #fffbeb;
+  --warning-border: #fef3c7;
+  --info-bg: #eff6ff;
+  --info-border: #dbeafe;
 }
 
 [data-theme='dark'] {
   --background-default: #0F0F0F;
   --background-paper: #1A1A1A;
+  --background-secondary: #242424;
   --text-primary: #F5F5F5;
   --text-secondary: #A0A0A0;
+  --text-tertiary: #71717A;
+  --text-inverse: #000000;
   --divider: rgba(255, 255, 255, 0.12);
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+
+  /* semantic state colors for dark mode */
+  --error-bg: rgba(244, 67, 54, 0.15);
+  --error-border: rgba(244, 67, 54, 0.3);
+  --success-bg: rgba(76, 175, 80, 0.15);
+  --success-border: rgba(76, 175, 80, 0.3);
+  --warning-bg: rgba(255, 152, 0, 0.15);
+  --warning-border: rgba(255, 152, 0, 0.3);
+  --info-bg: rgba(33, 150, 243, 0.15);
+  --info-border: rgba(33, 150, 243, 0.3);
+}
+
+body {
+  background-color: var(--background-default);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .aps-logo-icon {

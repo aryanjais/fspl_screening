@@ -1,7 +1,7 @@
 .severity-cards {
     display: flex;
-    background-color: #ffffff;
-    border-bottom: 1px solid #eaedf3;
+    background-color: var(--background-paper);
+    border-bottom: 1px solid var(--divider);
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -22,7 +22,7 @@
 
 .card-title {
     font-size: 14px;
-    color: #64748b;
+    color: var(--text-secondary);
     font-weight: 500;
 }
 
@@ -36,23 +36,24 @@
 }
 
 .card-icon.critical {
-    background-color: #ffe4e6;
-    color: #e11d48;
+    background-color: var(--error-bg);
+    color: var(--error-main);
 }
 
 .card-icon.high {
-    background-color: #ffedd5;
-    color: #ea580c;
+    background-color: var(--warning-bg);
+    color: var(--warning-main);
 }
 
 .card-icon.medium {
-    background-color: #fef9c3;
-    color: #ca8a04;
+    background-color: var(--warning-bg);
+    color: var(--warning-main);
 }
 
 .card-icon.low {
-    background-color: #dbeafe;
+    background-color: var(--info-bg);
     color: #2563eb;
+    /* Keep vivid blue for info */
 }
 
 .card-bottom {
@@ -64,7 +65,7 @@
 .card-number {
     font-size: 32px;
     font-weight: 700;
-    color: #0f172a;
+    color: var(--text-primary);
     line-height: 1;
 }
 

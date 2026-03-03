@@ -3,8 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 16px 32px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #eaedf3;
+    background-color: var(--background-paper);
+    border-bottom: 1px solid var(--border-light);
     height: 70px;
 }
 
@@ -13,22 +13,22 @@
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    color: #64748b;
+    color: var(--text-secondary);
 }
 
 .breadcrumb-main {
     font-size: 18px;
     font-weight: 600;
-    color: #0f172a;
+    color: var(--text-primary);
     margin-right: 16px;
 }
 
 .breadcrumb-icon {
-    color: #94a3b8;
+    color: var(--text-tertiary);
 }
 
 .breadcrumb-separator {
-    color: #cbd5e1;
+    color: var(--border-medium);
 }
 
 .breadcrumb-item {
@@ -36,11 +36,11 @@
 }
 
 .breadcrumb-item:hover {
-    color: #1a9e8e;
+    color: var(--primary-main);
 }
 
 .breadcrumb-item.active {
-    color: #1a9e8e;
+    color: var(--primary-main);
     font-weight: 500;
 }
 
@@ -51,10 +51,10 @@
 
 .btn-export {
     padding: 8px 16px;
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
+    background-color: var(--background-paper);
+    border: 1px solid var(--border-light);
     border-radius: 6px;
-    color: #334155;
+    color: var(--text-primary);
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -62,16 +62,16 @@
 }
 
 .btn-export:hover {
-    background-color: #f8fafc;
-    border-color: #94a3b8;
+    background-color: var(--background-secondary);
+    border-color: var(--border-medium);
 }
 
 .btn-stop {
     padding: 8px 16px;
-    background-color: #fef2f2;
-    border: 1px solid #fecaca;
+    background-color: var(--error-bg);
+    border: 1px solid var(--error-border);
     border-radius: 6px;
-    color: #ef4444;
+    color: var(--error-main);
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -79,5 +79,6 @@
 }
 
 .btn-stop:hover {
-    background-color: #fee2e2;
+    background-color: var(--error-border);
+    opacity: 0.9;
 }

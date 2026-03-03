@@ -13,11 +13,25 @@ const Login = () => {
                 backgroundImage: 'url(/images/login_background.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
+                backgroundColor: 'background.default', // Fallback color
+                position: 'relative',
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: (theme) => theme.palette.mode === 'dark'
+                        ? 'rgba(0,0,0,0.85)'
+                        : 'rgba(0,0,0,0.2)', // Overlay
+                    zIndex: 0
+                }
             }}
         >
-            <Grid container direction="column" sx={{ flexGrow: 1 }}>
+            <Grid container direction="column" sx={{ flexGrow: 1, position: 'relative', zIndex: 1 }}>
                 <Grid item>
                     <LoginHeader />
                 </Grid>
