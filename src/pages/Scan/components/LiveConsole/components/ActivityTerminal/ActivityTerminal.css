@@ -1,0 +1,53 @@
+.activity-terminal {
+    font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    padding: 24px 32px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.log-entry {
+    margin-bottom: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.log-time {
+    color: var(--text-tertiary);
+    white-space: nowrap;
+}
+
+.log-content {
+    color: var(--text-primary);
+    word-break: break-word;
+}
+
+.highlight-url {
+    color: var(--primary-main);
+}
+
+.dim-text {
+    color: var(--text-tertiary);
+}
+
+.highlight-code {
+    color: var(--primary-main);
+    background-color: #e6f6f5;
+    /* Keeping light variation hex */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.highlight-path {
+    background-color: var(--background-dark);
+    color: var(--text-inverse);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.highlight-error {
+    color: var(--error-main);
+    font-weight: bold;
+}

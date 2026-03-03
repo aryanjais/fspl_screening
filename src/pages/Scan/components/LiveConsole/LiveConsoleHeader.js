@@ -7,11 +7,11 @@ import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 const LiveConsoleHeader = () => {
     return (
         <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: '#94a3b8' }} />}
+            expandIcon={<ExpandMoreIcon sx={{ color: 'var(--text-tertiary)' }} />}
             aria-controls="live-console-content"
             id="live-console-header"
             sx={{
-                borderBottom: '1px solid #e2e8f0',
+                borderBottom: '1px solid var(--border-light)',
                 px: 3,
                 minHeight: 64,
                 '& .MuiAccordionSummary-content': {
@@ -25,26 +25,26 @@ const LiveConsoleHeader = () => {
             }}
         >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: '#1a9e8e' }} />
-                <Typography sx={{ fontWeight: 600, color: '#0f172a', fontSize: '15px' }}>Live Scan Console</Typography>
+                <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: 'var(--primary-main)' }} />
+                <Typography sx={{ fontWeight: 600, color: 'var(--text-primary)', fontSize: '15px' }}>Live Scan Console</Typography>
 
                 <Box sx={{
                     ml: 2,
                     display: 'flex',
                     alignItems: 'center',
                     gap: 0.5,
-                    bgcolor: '#f1f5f9',
+                    bgcolor: 'var(--background-default)',
                     px: 1.5,
                     py: 0.5,
                     borderRadius: '16px'
                 }}>
-                    <AccessTimeOutlinedIcon sx={{ fontSize: 14, color: '#64748b' }} />
-                    <Typography sx={{ fontSize: '12px', color: '#64748b', fontWeight: 500 }}>Running...</Typography>
+                    <AccessTimeOutlinedIcon sx={{ fontSize: 14, color: 'var(--text-secondary)' }} />
+                    <Typography sx={{ fontSize: '12px', color: 'var(--text-secondary)', fontWeight: 500 }}>Running...</Typography>
                 </Box>
             </Box>
 
             <Box sx={{ position: 'absolute', right: 16, display: 'flex', alignItems: 'center' }}>
-                <IconButton size="small" onClick={(e) => e.stopPropagation()} sx={{ color: '#94a3b8' }}>
+                <IconButton size="small" onClick={(e) => e.stopPropagation()} sx={{ color: 'var(--text-tertiary)' }}>
                     <CloseIcon fontSize="small" />
                 </IconButton>
             </Box>

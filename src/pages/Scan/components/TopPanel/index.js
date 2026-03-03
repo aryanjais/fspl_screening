@@ -17,7 +17,7 @@ const TopPanel = () => {
                         value={100}
                         size={100}
                         thickness={4}
-                        sx={{ color: '#0b1a26' }}
+                        sx={{ color: 'var(--background-dark)' }}
                     />
                     <CircularProgress
                         variant="determinate"
@@ -25,7 +25,7 @@ const TopPanel = () => {
                         size={100}
                         thickness={4}
                         sx={{
-                            color: '#1a9e8e',
+                            color: 'var(--primary-main)',
                             position: 'absolute',
                             left: 0,
                             circle: { strokeLinecap: 'round' }

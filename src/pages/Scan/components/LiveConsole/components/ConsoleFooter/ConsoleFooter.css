@@ -1,0 +1,66 @@
+.console-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 11px;
+    background-color: #f8fafc;
+    border-radius: 0 0 8px 8px;
+}
+
+.footer-left {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #64748b;
+}
+
+.footer-stat .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-main);
+}
+
+.footer-stat .stat-label {
+    font-weight: 500;
+}
+
+.footer-stat .stat-val {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.footer-right {
+    display: flex;
+    gap: 24px;
+    font-weight: 600;
+}
+
+.vuln-stat {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.vuln-stat.critical {
+    color: var(--error-main);
+}
+
+.vuln-stat.high {
+    color: var(--warning-main);
+}
+
+.vuln-stat.medium {
+    color: #eab308;
+}
+
+.vuln-stat.low {
+    color: var(--success-main);
+}

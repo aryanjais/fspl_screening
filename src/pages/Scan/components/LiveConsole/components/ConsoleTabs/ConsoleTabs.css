@@ -1,0 +1,24 @@
+.console-tabs-container {
+    display: flex;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.console-tab {
+    padding: 12px 32px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.console-tab.active {
+    color: var(--primary-main);
+    border-bottom-color: var(--primary-main);
+}
+
+.console-tab.active p {
+    color: var(--primary-main);
+}
+
+.console-tab:hover:not(.active) p {
+    color: var(--text-primary);
+}
