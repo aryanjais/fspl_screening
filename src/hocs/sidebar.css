@@ -1,0 +1,15 @@
+.sidebar-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f8fafc;
+    color: #475569;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+
+.sidebar-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}

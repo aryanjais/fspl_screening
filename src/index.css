@@ -1,5 +1,36 @@
+:root {
+  --primary-main: #0CC8A8;
+  --success-main: #4CAF50;
+  --warning-main: #FF9800;
+  --error-main: #F44336;
+
+  /* light mode defaults */
+  --background-default: #F5F5F5;
+  --background-paper: #FFFFFF;
+  --text-primary: #1A1A1A;
+  --text-secondary: #4A4A4A;
+  --divider: rgba(0, 0, 0, 0.12);
+}
+
+[data-theme='dark'] {
+  --background-default: #0F0F0F;
+  --background-paper: #1A1A1A;
+  --text-primary: #F5F5F5;
+  --text-secondary: #A0A0A0;
+  --divider: rgba(255, 255, 255, 0.12);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.aps-logo-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  border: 9px solid;
+  border-color: var(--primary-main);
 }
