@@ -4,7 +4,7 @@ import withSidebar from '../hocs/withSidebar';
 
 const Login = lazy(() => import('../pages/Login'));
 const Dashboard = lazy(() => import('../pages/Dashboard'));
-const ScanDetail = lazy(() => import('../pages/ScanDetail'));
+const ScanDetail = lazy(() => import('../pages/Scan'));
 const DashboardWithSidebar = withSidebar(Dashboard);
 const ScanDetailWithSidebar = withSidebar(ScanDetail);
 
