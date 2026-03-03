@@ -1,0 +1,220 @@
+.scan-table-container {
+    padding: 24px 32px;
+}
+
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 24px 12px;
+    border-radius: 8px 8px 0 0;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 16px;
+    width: 320px;
+    color: #94a3b8;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.search-icon {
+    color: #94a3b8;
+}
+
+.controls-right {
+    display: flex;
+    gap: 12px;
+}
+
+.control-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.control-btn:hover {
+    background-color: #f8fafc;
+}
+
+.btn-new-scan {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #1a9e8e;
+    border: 1px solid #1a9e8e;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-new-scan:hover {
+    background-color: #168b7d;
+}
+
+.table-wrapper {
+    background-color: #ffffff;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+}
+
+.scan-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: left;
+}
+
+.scan-table th {
+    padding: 16px 24px;
+    color: #94a3b8;
+    font-weight: 500;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.scan-table td {
+    padding: 16px 24px;
+    color: #475569;
+}
+
+.scan-table tr:last-child td {
+    border-bottom: none;
+}
+
+.scan-table tr:hover {
+    background-color: #f8fafc;
+}
+
+.row-name {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.row-date {
+    color: #94a3b8;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* Badges */
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status-badge.completed {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.status-badge.scheduled {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+.status-badge.failed {
+    background-color: #fee2e2;
+    color: #ef4444;
+}
+
+/* Progress */
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-track {
+    width: 60px;
+    height: 6px;
+    background-color: #f1f5f9;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 3px;
+}
+
+.progress-bar.completed {
+    background-color: #1a9e8e;
+}
+
+.progress-bar.scheduled {
+    background-color: #1a9e8e;
+}
+
+.progress-bar.failed {
+    background-color: #ef4444;
+}
+
+.progress-text {
+    font-size: 13px;
+    color: #475569;
+    min-width: 32px;
+}
+
+/* Vuln Badges */
+.vuln-badges {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+.vuln-badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #ffffff;
+    min-width: 24px;
+    text-align: center;
+}
+
+.vuln-badge.critical {
+    background-color: #ef4444;
+}
+
+.vuln-badge.high {
+    background-color: #f97316;
+}
+
+.vuln-badge.medium {
+    background-color: #eab308;
+}
+
+.vuln-badge.low {
+    background-color: #22c55e;
+}
