@@ -15,6 +15,11 @@ const Sidebar = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const handleLogout = () => {
+        localStorage.removeItem('isLoggedIn');
+        navigate('/login');
+    };
+
     return (
         <div className="sidebar">
             <div className="sidebar-logo">
@@ -74,7 +79,7 @@ const Sidebar = () => {
                 </ul>
             </div>
 
-            <div className="sidebar-profile">
+            <div className="sidebar-profile" onClick={handleLogout} title="Logout" style={{ cursor: 'pointer' }}>
                 <div className="profile-avatar">
                     <img src="https://ui-avatars.com/api/?name=Admin&background=f1c40f&color=fff" alt="avatar" />
                 </div>

@@ -3,7 +3,7 @@ import './Dashboard.css';
 import Header from './components/Header';
 import Stats from './components/Stats';
 import SeverityCards from './components/SeverityCards';
-import ScanTable from './Scan';
+import ScanTable from './components/Scan';
 
 const Dashboard = () => {
     return (
